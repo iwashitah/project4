@@ -48,4 +48,4 @@ jobs:
 
       - name: Build and Upload
         #run: jf gradle clean uploadArchives
-        run: jf ./gradlew clean uploadArchives
+        run: jf gradle clean uploadArchives
