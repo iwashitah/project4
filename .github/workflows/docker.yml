@@ -1,4 +1,4 @@
-name: "NPM test"
+name: "Docker test"
 on: 
   workflow_dispatch:
 jobs:
