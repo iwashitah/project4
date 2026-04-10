@@ -17,11 +17,10 @@ jobs:
           JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
           JFROG_CLI_BUILD_PROJECT: proj1
           JFROF_CLI_LOG_LEVEL: DEBUG
-      - name: Build Docker image
+      - name: Run Docker task
         run: |
-          docker build -t iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3 .
-      - name: Scan Docker image
-        run: |
+          jf docker build -t iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3 .
+          jf docker push iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3
           #jf docker scan iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3
           jf rt bp
           jf bs
