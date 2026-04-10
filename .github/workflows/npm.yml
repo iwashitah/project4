@@ -12,7 +12,7 @@ jobs:
       - name: Setup JFrog CLI
         uses: jfrog/setup-jfrog-cli@v5
         with:
-          disable-auto-build-publish: false
+          disable-auto-build-publish: true
           disable-job-summary: false
         env:
           JF_URL: ${{ vars.JF_URL }}
