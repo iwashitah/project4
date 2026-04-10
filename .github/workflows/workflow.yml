@@ -56,7 +56,7 @@ jobs:
             --repo-deploy=gradle-virtual
 
       - name: Build and Upload
-        run: jf ./gradlew clean uploadArchives
+        run: jf gradle clean uploadArchives
         env:
           ORG_GRADLE_PROJECT_repoUser: ${{ secrets.JF_USER }}
           ORG_GRADLE_PROJECT_repoPassword: ${{ secrets.JF_ACCESS_TOKEN }}
