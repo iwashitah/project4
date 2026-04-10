@@ -19,9 +19,9 @@ jobs:
           #JFROF_CLI_LOG_LEVEL: DEBUG
       - name: Run JFrog CLI
         run: |
-          #jf mvnc --repo-deploy-releases proj1-maven-virtual --repo-deploy-snapshots proj1-maven-virtual --repo-resolve-releases proj1-maven-virtual --repo-resolve-snapshots proj1-maven-virtual
+          jf mvnc --repo-deploy-releases proj1-maven-virtual --repo-deploy-snapshots proj1-maven-virtual --repo-resolve-releases proj1-maven-virtual --repo-resolve-snapshots proj1-maven-virtual
           #jf mvn clean install
-          #jf mvn install
-          jf rt u pom.xml example-repo-local/
+          jf mvn install
+          #jf rt u pom.xml example-repo-local/
           #jf rt bp
           #jf bs
