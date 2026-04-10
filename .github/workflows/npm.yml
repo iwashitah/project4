@@ -23,4 +23,4 @@ jobs:
         run: |
           jf npmc --repo-deploy proj1-npm-virtual --repo-resolve proj1-npm-virtual
           jf npm publish
-          jf rt u package.json example-repo-local/
+          #jf rt u package.json example-repo-local/
