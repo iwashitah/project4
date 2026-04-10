@@ -18,4 +18,5 @@ jobs:
       - name: Run JFrog CLI
         run: |
           jf mvnc --repo-deploy-releases proj1-maven-virtual --repo-deploy-snapshots proj1-maven-virtual --repo-resolve-releases proj1-maven-virtual --repo-resolve-snapshots proj1-maven-virtual
-          jf mvn clean install
+          #jf mvn clean install
+          jf mvn install
