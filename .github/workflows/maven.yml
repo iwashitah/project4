@@ -1,4 +1,4 @@
-name: "Setup JFrog CLI Example"
+name: "Maven Test"
 on: 
   workflow_dispatch:
 jobs:
