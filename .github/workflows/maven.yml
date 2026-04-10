@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      JFROG_CLI_BUILD_PROJECT: proj1
+      #JFROG_CLI_BUILD_PROJECT: proj1
       JFROF_CLI_LOG_LEVEL: DEBUG
     steps:
       - name: Checkout
