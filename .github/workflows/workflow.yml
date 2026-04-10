@@ -33,9 +33,15 @@ jobs:
       - name: Prepare Gradle wrapper
         run: chmod +x ./gradlew
 
-      - name: Recreate Gradle Wrapper (force 6.9)
+      - name: Disable maven plugin temporarily
         run: |
-          ./gradlew wrapper --gradle-version 6.9
+          sed -i 's/apply plugin: '\''maven'\''/\/\/ apply plugin: '\''maven'\''/' build.gradle
+
+      - name: Downgrade Gradle Wrapper
+        run: ./gradlew wrapper --gradle-version 6.9
+
+      - name: Restore build.gradle
+        run: git checkout -- build.gradle
 
       - name: Verify Gradle version
         run: ./gradlew --version
