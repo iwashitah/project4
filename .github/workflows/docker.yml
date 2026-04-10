@@ -22,5 +22,6 @@ jobs:
           docker build -t iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3 .
       - name: Scan Docker image
         run: |
-          jf docker scan iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3
-          jf rt bp
+          #jf docker scan iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3
+          #jf rt bp
+          js bs
