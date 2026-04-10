@@ -4,6 +4,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      JFROG_CLI_LOG_LEVEL: DEBUG
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -16,7 +18,6 @@ jobs:
           JF_URL: ${{ vars.JF_URL }}
           JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
           JFROG_CLI_BUILD_PROJECT: proj1
-          JFROG_CLI_LOG_LEVEL: DEBUG
       - name: Run JFrog CLI
         run: |
           jf npmc --repo-deploy proj1-npm-virtual --repo-resolve proj1-npm-virtual
