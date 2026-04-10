@@ -60,3 +60,6 @@ jobs:
         env:
           ORG_GRADLE_PROJECT_repoUser: ${{ secrets.JF_USER }}
           ORG_GRADLE_PROJECT_repoPassword: ${{ secrets.JF_ACCESS_TOKEN }}
+
+      - name: Publish Build
+        run: jf rt bp
