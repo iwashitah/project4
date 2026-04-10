@@ -33,6 +33,14 @@ jobs:
       - name: Prepare Gradle wrapper
         run: chmod +x ./gradlew
 
+      - name: Recreate Gradle Wrapper (force 6.9)
+        run: |
+          rm -rf gradle/wrapper
+          ./gradlew wrapper --gradle-version 6.9
+
+      - name: Verify Gradle version
+        run: ./gradlew --version
+
       - name: Setup JFrog CLI
         uses: jfrog/setup-jfrog-cli@v4
         env:
