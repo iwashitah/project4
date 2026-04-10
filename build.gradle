@@ -1,0 +1,16 @@
+apply plugin: 'maven'
+apply plugin: 'java'
+
+group = 'com.example'
+version = '1.0.0'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "https://iwashitah6.jfrog.io/artifactory/gradle-virtual") {
+                authentication(userName: project.findProperty("repoUser"),
+                               password: project.findProperty("repoPassword"))
+            }
+        }
+    }
+}
