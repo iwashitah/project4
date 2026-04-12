@@ -29,6 +29,7 @@ jobs:
           jf docker build -t iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3 .
           jf docker push iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3
           jf docker scan iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3
-          jf gsm
-          jf rt bp
-          jf bs
+          jf audit --format=sarif
+          #jf gsm
+          #jf rt bp
+          #jf bs
