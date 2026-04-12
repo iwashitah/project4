@@ -44,8 +44,6 @@ jobs:
         echo $JF_TOKEN | jf c add --interactive=false --url=$JF_URL --access-token-stdin
 
     - name: Run JFrog SAST
-      env:
-        JF_URL: ${{ secrets.JF_URL }}
       run: |
         jf audit --sast --format=sarif > jfrog_sast.sarif
 
