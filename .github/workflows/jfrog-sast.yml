@@ -45,7 +45,7 @@ jobs:
 
     - name: Run JFrog SAST
       run: |
-        jf audit --sast --format=sarif > jfrog_sast.sarif
+        jf audit --url=$JF_URL --sast --format=sarif > jfrog_sast.sarif
 
 
     - name: Upload output to generate autofix
