@@ -28,6 +28,6 @@ jobs:
         run: |
           jf docker build -t iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.10 .
           jf docker push iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.10
-          jf docker scan iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.10
+          jf docker scan iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.10 --format=sarif
           #jf rt bp
           #jf bs
