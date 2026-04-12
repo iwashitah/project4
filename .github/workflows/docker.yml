@@ -7,7 +7,6 @@ jobs:
     env:
       JFROG_CLI_BUILD_PROJECT: proj1
       JFROF_CLI_LOG_LEVEL: DEBUG
-      JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     timeout-minutes: 30
     permissions: 
       id-token: write
@@ -24,10 +23,11 @@ jobs:
         env:
           JF_URL: ${{ vars.JF_URL }}
           JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+          JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Docker task
         run: |
-          jf docker build -t iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3 .
-          jf docker push iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3
-          jf docker scan iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.3
+          jf docker build -t iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.10 .
+          jf docker push iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.10
+          jf docker scan iwashitah6.jfrog.io/proj1-docker-virtual/alpine:3.10
           #jf rt bp
           #jf bs
